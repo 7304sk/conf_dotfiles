@@ -1,0 +1,10 @@
+# >>>>>>>>>> BLACK LIST >>>>>>>>>>
+*
+# <<<<<<<<<< BLACK LIST <<<<<<<<<<
+
+# >>>>>>>>>> WHITE LIST >>>>>>>>>>
+!/dotfiles
+!/dotfiles/*
+!.gitignore
+!install.sh
+# <<<<<<<<<< WHITE LIST <<<<<<<<<<

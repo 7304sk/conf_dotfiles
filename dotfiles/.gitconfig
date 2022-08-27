@@ -1,0 +1,21 @@
+[user]
+	name = shoalwave
+	email = shoalwave.dev@gmail.com
+[init]
+	defaultbranch = main
+[merge]
+	ff = false
+[pull]
+	ff = only
+[fetch]
+    prune = true
+[push]
+    default = current
+[rebase]
+    autostash = true
+    autosquash = true
+[color]
+    ui = auto
+[core]
+	editor = nvim
+	excludesfile = ~/.gitignore_global
