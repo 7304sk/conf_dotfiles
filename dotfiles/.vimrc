@@ -47,13 +47,22 @@ if has('persistent_undo')
 endif
 
 " keymap
+" : Swap colon and semicolon
 nnoremap ; :
 nnoremap : ;
-inoremap <C-Space> <Esc>
-inoremap <C-s> <Esc>:w<CR>
-nnoremap <C-s> :w<CR>
+" escape
+inoremap <silent> jj <Esc>
+" Move to beginning or end of line
+noremap <S-h> 0
+noremap <S-l> $
+" increment, decrement
+nnoremap + <C-a>
+nnoremap - <C-x>
+" undo, redo
 nnoremap <Space>z :undo<CR>
 nnoremap <Space>y :redo<CR>
+" NERDTree (only for neovim)
 nnoremap <silent> <Space><Space> :NERDTreeToggle<CR>
+" search
 nnoremap <silent> <Space>f :let @/ = '\<' . expand('<cword>') . '\>'<CR>:set hlsearch<CR>
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
