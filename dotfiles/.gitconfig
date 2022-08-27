@@ -1,12 +1,12 @@
 [user]
-	name = shoalwave
-	email = shoalwave.dev@gmail.com
+    name = shoalwave
+    email = shoalwave.dev@gmail.com
 [init]
-	defaultbranch = main
+    defaultbranch = main
 [merge]
-	ff = false
+    ff = false
 [pull]
-	ff = only
+    ff = only
 [fetch]
     prune = true
 [push]
@@ -17,5 +17,5 @@
 [color]
     ui = auto
 [core]
-	editor = nvim
-	excludesfile = ~/.gitignore_global
+    editor = nvim
+    excludesfile = ~/.gitignore_global

@@ -11,10 +11,10 @@ set nobomb
 set binary
 set ttyfast
 set backspace=indent,eol,start
-set tabstop=4
 set softtabstop=0
-set shiftwidth=4
 set expandtab
+set tabstop=4
+set shiftwidth=4
 set splitright
 set splitbelow
 set hidden
