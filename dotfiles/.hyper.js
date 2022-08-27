@@ -143,7 +143,8 @@ module.exports = {
         "hyper-opacity",
         "hyper-tab-icons-plus",
         "hyper-statusline",
-        "hyper-search"
+        "hyper-search",
+        "hyper-quit"
     ],
     // in development, you can create a directory under
     // `~/.hyper_plugins/local/` and include it here
