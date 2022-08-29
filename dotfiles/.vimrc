@@ -52,6 +52,7 @@ nnoremap ; :
 nnoremap : ;
 " escape
 inoremap <silent> jj <Esc>
+nnoremap <Space>s :wq
 " Move to beginning or end of line
 noremap <S-h> 0
 noremap <S-l> $
