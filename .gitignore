@@ -3,6 +3,7 @@
 # <<<<<<<<<< BLACK LIST <<<<<<<<<<
 
 # >>>>>>>>>> WHITE LIST >>>>>>>>>>
+!/README.md
 !/dotfiles
 !/dotfiles/*
 !.gitignore
