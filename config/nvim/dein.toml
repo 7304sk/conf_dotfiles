@@ -1,0 +1,87 @@
+# solarized (theme)
+[[plugins]]
+repo = 'altercation/vim-colors-solarized'
+
+# coc
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+on_i = 1
+merged = '0'
+hook_source = 'call coil398#init#coc#hook_source()'
+
+# NERDTree
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides' 
+hook_add = '''
+    let g:indent_guides_enable_on_vim_startup = 1
+'''
+
+# git for NERDTree
+[[plugins]]
+repo = 'Xuyuanp/nerdtree-git-plugin'
+
+# devicons
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+# fugitive
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+# theme for alirline
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+hook_add = '''
+        let g:airline_theme = 'powerlineish'
+'''
+
+# airline
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+#depends =['vim-airline/vim-airline-themes', 'tpope/vim-fugitive']
+hook_add = '''
+    let g:airline_powerline_fonts = 1
+    let g:airline#extensions#tabline#enabled = 1
+    let g:airline#extensions#tabline#buffer_nr_show = 1
+    let g:airline#extensions#branch#enabled=1
+    let g:airline#extensions#hunks#enabled=0
+    if !exists('g:airline_symbols')
+        let g:airline_symbols = {}
+    endif
+    let g:airline_section_a = airline#section#create(['mode', 'crypt'])
+'''
+
+# fzf
+[[plugins]]
+repo = 'junegunn/fzf'
+hook_post_update = './install --all'
+merged = 0
+
+# gitgutter
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+hook_add = '''
+        set signcolumn=yes
+        let g:gitgutter_async = 1
+        let g:gitgutter_sign_modified = 'rw'
+        highlight GitGutterAdd ctermfg=green
+        highlight GitGutterChange ctermfg=yellow
+        highlight GitGutterDelete ctermfg=red
+        highlight GitGutterChangeDelete ctermfg=yellow
+'''
+
+# tcomment
+[[plugins]]
+repo = 'tomtom/tcomment_vim'
+hook_add = '''
+    vnoremap ? :'<,'>TComment<CR>
+'''
+
+# Colorize brackets pair
+[[plugins]]
+repo = 'luochen1990/rainbow'
+hook_add = '''
+        let g:rainbow_active = 1
+'''
+
