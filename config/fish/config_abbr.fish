@@ -14,6 +14,9 @@ abbr -a rr      rm -rf
 abbr -a sai     sudo apt install -y
 abbr -a sar     sudo apt remove
 abbr -a sas     sudo apt search
+abbr -a b       brew
+abbr -a bb      brew bundle --global
+abbr -a bbd     brew bundle dump --global --force
 abbr -a fcf     vi ~/.config/fish/config.fish
 abbr -a sfcf    source ~/.config/fish/config.fish
 abbr -a g       git

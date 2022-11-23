@@ -18,6 +18,9 @@ SETUVAR _fish_abbr__2E_2E_2E_:cd\x20\x2e\x2e/\x2e\x2e/\x2e\x2e/
 SETUVAR _fish_abbr_abe:for\x20a\x20in\x20\x28abbr\x20\x2d\x2dlist\x29\x3b\x20abbr\x20\x2d\x2derase\x20\x24a\x3b\x20end
 SETUVAR _fish_abbr_abl:cat\x20/Users/owner/\x2econfig/fish/config_abbr\x2efish
 SETUVAR _fish_abbr_abs:source\x20\x7e/\x2econfig/fish/config_abbr\x2efish
+SETUVAR _fish_abbr_b:brew
+SETUVAR _fish_abbr_bb:brew\x20bundle\x20\x2d\x2dglobal
+SETUVAR _fish_abbr_bbd:brew\x20bundle\x20dump\x20\x2d\x2dglobal\x20\x2d\x2dforce
 SETUVAR _fish_abbr_bz:tar\x20jcvf
 SETUVAR _fish_abbr_dig:dig\x20any\x20\x2bnoall\x20\x2banswer
 SETUVAR _fish_abbr_e:exit
@@ -53,11 +56,14 @@ SETUVAR _fish_abbr_unbz:tar\x20jxvf
 SETUVAR _fish_abbr_ungz:tar\x20zxvf
 SETUVAR _fish_abbr_w:which
 SETUVAR _fish_abbr_work:cd\x20/Users/owner/WORK/
+SETUVAR _fisher_0rax_2F_fish_2D_bd_files:/Users/owner/\x2econfig/fish/functions/bd\x2efish\x1e/Users/owner/\x2econfig/fish/completions/bd\x2efish
+SETUVAR _fisher_edc_2F_bass_files:/Users/owner/\x2econfig/fish/functions/__bass\x2epy\x1e/Users/owner/\x2econfig/fish/functions/bass\x2efish
 SETUVAR _fisher_jethrokuan_2F_fzf_files:/Users/owner/\x2econfig/fish/functions/__fzf_cd\x2efish\x1e/Users/owner/\x2econfig/fish/functions/__fzf_complete\x2efish\x1e/Users/owner/\x2econfig/fish/functions/__fzf_complete_preview\x2efish\x1e/Users/owner/\x2econfig/fish/functions/__fzf_find_file\x2efish\x1e/Users/owner/\x2econfig/fish/functions/__fzf_get_dir\x2efish\x1e/Users/owner/\x2econfig/fish/functions/__fzf_open\x2efish\x1e/Users/owner/\x2econfig/fish/functions/__fzf_parse_commandline\x2efish\x1e/Users/owner/\x2econfig/fish/functions/__fzf_reverse_isearch\x2efish\x1e/Users/owner/\x2econfig/fish/functions/__fzfcmd\x2efish\x1e/Users/owner/\x2econfig/fish/conf\x2ed/fzf\x2efish
 SETUVAR _fisher_jethrokuan_2F_z_files:/Users/owner/\x2econfig/fish/functions/__z\x2efish\x1e/Users/owner/\x2econfig/fish/functions/__z_add\x2efish\x1e/Users/owner/\x2econfig/fish/functions/__z_clean\x2efish\x1e/Users/owner/\x2econfig/fish/functions/__z_complete\x2efish\x1e/Users/owner/\x2econfig/fish/conf\x2ed/z\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:/Users/owner/\x2econfig/fish/functions/fisher\x2efish\x1e/Users/owner/\x2econfig/fish/completions/fisher\x2efish
+SETUVAR _fisher_oh_2D_my_2D_fish_2F_plugin_2D_extract_files:/Users/owner/\x2econfig/fish/functions/extract\x2efish
 SETUVAR _fisher_oh_2D_my_2D_fish_2F_theme_2D_bobthefish_files:/Users/owner/\x2econfig/fish/functions/__bobthefish_colors\x2efish\x1e/Users/owner/\x2econfig/fish/functions/__bobthefish_display_colors\x2efish\x1e/Users/owner/\x2econfig/fish/functions/__bobthefish_glyphs\x2efish\x1e/Users/owner/\x2econfig/fish/functions/bobthefish_display_colors\x2efish\x1e/Users/owner/\x2econfig/fish/functions/fish_greeting\x2efish\x1e/Users/owner/\x2econfig/fish/functions/fish_mode_prompt\x2efish\x1e/Users/owner/\x2econfig/fish/functions/fish_prompt\x2efish\x1e/Users/owner/\x2econfig/fish/functions/fish_right_prompt\x2efish\x1e/Users/owner/\x2econfig/fish/functions/fish_title\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/fisher\x1eoh\x2dmy\x2dfish/theme\x2dbobthefish\x1ejethrokuan/z\x1ejethrokuan/fzf
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1eoh\x2dmy\x2dfish/theme\x2dbobthefish\x1ejethrokuan/z\x1ejethrokuan/fzf\x1e0rax/fish\x2dbd\x1eoh\x2dmy\x2dfish/plugin\x2dextract\x1eedc/bass
 SETUVAR fish_color_autosuggestion:707A8C
 SETUVAR fish_color_cancel:\x2d\x2dreverse
 SETUVAR fish_color_command:5CCFE6
