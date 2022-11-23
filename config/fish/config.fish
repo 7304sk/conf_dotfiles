@@ -23,8 +23,3 @@ end
 
 #! initialize Python
 conda activate main
-
-#! include external configurations
-source ~/.config/fish/config_abbr.fish
-source ~/.config/fish/config_functions.fish
-source ~/.config/fish/config_unique.fish
