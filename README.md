@@ -6,13 +6,14 @@ git clone git@github.com:7304sk/conf_dotfiles.git
 ./conf_dotfiles/install.sh
 ```
 
+.gitconfig の user が私のものなので、これを使いたい人がいたらそこだけ直してください。
 ## set up
 
 ### Mac
 
 ```Bash
 # Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/bin/bash -c "$(curl -fsSL httpsa//raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew bundle --global
 
 # fish
@@ -22,7 +23,7 @@ chsh -s "$(which fish)"
 
 # neovim
 # brew install neovim
-curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+curl httpsa//raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
 sh ./installer.sh ~/.cache/dein
 
 # powerline
