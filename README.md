@@ -3,7 +3,9 @@
 ```Bash
 cd
 git clone git@github.com:7304sk/conf_dotfiles.git
-./conf_dotfiles/install.sh
+cd conf_dotfiles
+git update-index --skip-worktree config/fish/conf.d/config_unique.fish
+./install.sh
 ```
 
 .gitconfig の user が私のものなので、これを使いたい人がいたらそこだけ直してください。
