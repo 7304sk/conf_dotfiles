@@ -52,7 +52,11 @@ abbr -a gsl     git stash list
 abbr -a gt      git tag
 # docker
 abbr -a d       docker
-abbr -a dc      docker-compose
-abbr -a dcb     docker-compose build
-abbr -a dcu     docker-compose up -d
-abbr -a dcd     docker-compose down
+abbr -a de      docker exec -it
+abbr -a da      docker attach
+abbr -a di      docker images
+abbr -a dp      docker ps -a
+abbr -a dcp     docker-compose
+abbr -a dcpb    docker-compose build
+abbr -a dcpu    docker-compose up -d
+abbr -a dcpd    docker-compose down
