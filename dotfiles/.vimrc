@@ -73,3 +73,4 @@ nnoremap <Space>b :MarkdownPreview<CR>
 " table
 vnoremap mt :'<,'>MakeTable
 vnoremap tm :'<,'>MakeTable!
+nnoremap <Space>t :UnmakeTable

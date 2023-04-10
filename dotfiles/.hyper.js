@@ -130,7 +130,7 @@ module.exports = {
         // set to true to preserve working directory when creating splits or tabs
         preserveCWD: true,
         // for advanced config flags please refer to https://hyper.is/#cfg
-        opacity: 0.85,
+        opacity: 0.9,
         // hyperterm-overlay
         overlay: {
             alwaysOnTop: true,
@@ -144,7 +144,7 @@ module.exports = {
             resizable: true,
             startAlone: false,
             startup: true,
-            size: 1,
+            size: 0.6,
             tray: true,
             unique: true
           },
