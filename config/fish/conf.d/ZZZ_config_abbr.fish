@@ -10,9 +10,10 @@ abbr -a ll      ls -alFX
 abbr -a .       cd ../
 abbr -a ..      cd ../../
 abbr -a ...     cd ../../../
-abbr -a work    cd ~/WORK/
-abbr -a w       which
-abbr -a rr      rm -rf
+abbr -a home    cd $WORK_HOME
+abbr -a wi      which
+abbr -a s       source
+abbr -a c       clear
 abbr -a py      python
 abbr -a e       exit
 abbr -a gz      tar zcvf
@@ -24,12 +25,9 @@ abbr -a dig     dig any +noall +answer
 abbr -a sai     sudo apt install -y
 abbr -a sar     sudo apt remove
 abbr -a sas     sudo apt search
-# brew
-abbr -a b       brew
-abbr -a bb      brew bundle --global
-abbr -a bbd     brew bundle dump --global --force
-abbr -a fcf     vi ~/.config/fish/config.fish
-abbr -a sfcf    source ~/.config/fish/config.fish
+# mac
+abbr -a hb      brew
+abbr -a nb      nodebrew
 # git
 abbr -a g       git
 abbr -a gi      git init
