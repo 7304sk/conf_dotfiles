@@ -52,9 +52,7 @@ nnoremap ; :
 nnoremap : ;
 " escape
 inoremap <silent> jj <Esc>
-inoremap jf <Esc>:w<CR>
-nnoremap <Space>s :w<CR>
-nnoremap <Space>e :q<CR>
+inoremap jf <Esc>:w
 " Move to beginning or end of line
 noremap <S-h> 0
 noremap <S-l> $
@@ -69,3 +67,9 @@ nnoremap <silent> <Space><Space> :NERDTreeToggle<CR>
 " search
 nnoremap <silent> <Space>f :let @/ = '\<' . expand('<cword>') . '\>'<CR>:set hlsearch<CR>
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+" markdown
+" preview
+nnoremap <Space>b :MarkdownPreview<CR>
+" table
+vnoremap mt :'<,'>MakeTable
+vnoremap tm :'<,'>MakeTable!
