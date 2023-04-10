@@ -24,3 +24,4 @@ syntax enable
 " Set up plugin
 let NERDTreeShowHidden = 1
 "autocmd VimEnter * execute wNERDTree'
+

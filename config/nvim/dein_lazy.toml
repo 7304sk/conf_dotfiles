@@ -1,3 +1,15 @@
 [[plugins]]
 repo  = 'Quramy/tsuquyomi'
 on_ft = ['typescript']
+
+# markdown preview
+[[plugins]]
+repo = 'iamcco/markdown-preview.nvim'
+on_ft = ['markdown', 'pandoc.markdown', 'rmd']
+build = 'sh -c "cd app && npm install"'
+
+# auto complicate markdown table
+[[plugins]]
+repo = 'mattn/vim-maketable'
+on_ft = ['markdown', 'pandoc.markdown', 'rmd']
+
