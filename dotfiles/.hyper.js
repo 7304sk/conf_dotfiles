@@ -144,7 +144,7 @@ module.exports = {
             resizable: true,
             startAlone: false,
             startup: true,
-            size: 0.6,
+            size: 1,
             tray: true,
             unique: true
           },
