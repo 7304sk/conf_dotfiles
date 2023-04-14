@@ -27,6 +27,8 @@ chsh -s "$(which fish)"
 # brew install neovim
 curl httpsa//raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
 sh ./installer.sh ~/.cache/dein
+brew install bat
+brew install ripgrep
 # if you are using npm instead of yarn;
 # cd ~/.cache/dein/repos/github.com/iamcco/markdown-preview.nvim/app/ && npm install
 

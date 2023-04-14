@@ -1,6 +1,10 @@
-# solarized (theme)
+# Tender (color theme)
 [[plugins]]
-repo = 'altercation/vim-colors-solarized'
+repo = 'jacoborus/tender.vim'
+
+# solarized (theme)
+#[[plugins]]
+# repo = 'altercation/vim-colors-solarized'
 
 # coc
 [[plugins]]
@@ -10,16 +14,37 @@ on_i = 1
 merged = '0'
 hook_source = 'call coil398#init#coc#hook_source()'
 
-# NERDTree
+# fern
 [[plugins]]
-repo = 'nathanaelkane/vim-indent-guides' 
+repo = 'lambdalisue/fern.vim'
+
+# git-status for fern
+[[plugins]]
+repo = 'lambdalisue/fern-git-status.vim'
+
+# nerdfont for fern
+[[plugins]]
+repo = 'lambdalisue/nerdfont.vim'
+
+[[plugins]]
+repo = 'lambdalisue/fern-renderer-nerdfont.vim'
 hook_add = '''
-    let g:indent_guides_enable_on_vim_startup = 1
+  let g:fern#renderer = 'nerdfont'
 '''
 
-# git for NERDTree
 [[plugins]]
-repo = 'Xuyuanp/nerdtree-git-plugin'
+repo = 'lambdalisue/glyph-palette.vim'
+hook_add = '''
+  augroup my-glyph-palette
+    autocmd! *
+    autocmd FileType fern call glyph_palette#apply()
+    autocmd FileType nerdtree,startify call glyph_palette#apply()
+  augroup END
+'''
+
+# fern preview
+[[plugins]]
+repo = 'yuki-yano/fern-preview.vim'
 
 # devicons
 [[plugins]]
@@ -58,6 +83,9 @@ repo = 'junegunn/fzf'
 hook_post_update = './install --all'
 merged = 0
 
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+
 # gitgutter
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
@@ -84,4 +112,8 @@ repo = 'luochen1990/rainbow'
 hook_add = '''
         let g:rainbow_active = 1
 '''
+
+# Buffer Line
+[[plugins]]
+repo = 'akinsho/bufferline.nvim'
 
