@@ -69,7 +69,7 @@ nnoremap <Space><Right> <C-w><Right>
 nnoremap <Space><Up> <C-w><Up>
 nnoremap <Space><Down> <C-w><Down>
 " search
-nnoremap <silent> <Space>f :let @/ = '\<' . expand('<cword>') . '\>'<CR>:set hlsearch<CR>
+" nnoremap <silent> <Space>f :let @/ = '\<' . expand('<cword>') . '\>'<CR>:set hlsearch<CR>
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 " markdown
 " preview
@@ -80,14 +80,12 @@ vnoremap tm :'<,'>MakeTable!
 nnoremap <Space>t :UnmakeTable
 "" git操作
 " g]で前の変更箇所へ移動する
-nnoremap g[ :GitGutterPrevHunk<CR>
+nnoremap <Space>[ :GitGutterPrevHunk<CR>
 " g[で次の変更箇所へ移動する
-nnoremap g] :GitGutterNextHunk<CR>
+nnoremap <Space>] :GitGutterNextHunk<CR>
 " ghでdiffをハイライトする
-nnoremap gh :GitGutterLineHighlightsToggle<CR>
-" gpでカーソル行のdiffを表示する
-nnoremap gp :GitGutterPreviewHunk<CR>
-" 記号の色を変更する
+nnoremap <Space>h :GitGutterLineHighlightsToggle<CR>
+" Gitguuter記号の色を変更する
 highlight GitGutterAdd ctermfg=green
 highlight GitGutterChange ctermfg=blue
 highlight GitGutterDelete ctermfg=red
@@ -108,7 +106,7 @@ fun! FzfOmniFiles()
 endfun
 nnoremap <C-p> :call FzfOmniFiles()<CR>
 
-" Ctrl+gで文字列検索を開く
+" Ctrl+gで複数ファイルの文字列検索を開く
 " <S-?>でプレビューを表示/非表示する
 command! -bang -nargs=* Rg
 \ call fzf#vim#grep(
@@ -118,20 +116,11 @@ command! -bang -nargs=* Rg
 \ <bang>0)
 nnoremap <C-g> :Rg<CR>
 
-" frでカーソル位置の単語をファイル検索する
-nnoremap fr vawy:Rg <C-R>"<CR>
-" frで選択した単語をファイル検索する
-xnoremap fr y:Rg <C-R>"<CR>
-
-" fbでバッファ検索を開く
-nnoremap fb :Buffers<CR>
-" fpでバッファの中で1つ前に開いたファイルを開く
-nnoremap fp :Buffers<CR><CR>
-" flで開いているファイルの文字列検索を開く
-nnoremap fl :BLines<CR>
-" fmでマーク検索を開く
-nnoremap fm :Marks<CR>
-" fhでファイル閲覧履歴検索を開く
-nnoremap fh :History<CR>
+" Space rでカーソル位置の単語をファイル検索する
+nnoremap <Space>r vawy:Rg <C-R>"<CR>
+" (Visual) Ctrl+gで選択した単語をファイル検索する
+xnoremap <C-g> y:Rg <C-R>"<CR>
+" Space fで開いているファイルの文字列検索を開く
+nnoremap <Space>f :BLines<CR>
 " fcでコミット履歴検索を開く
-nnoremap fc :Commits<CR>
+nnoremap <Space>c :Commits<CR>

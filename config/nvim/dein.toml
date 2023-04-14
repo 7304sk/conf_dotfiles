@@ -54,9 +54,17 @@ repo = 'yuki-yano/fern-preview.vim'
 [[plugins]]
 repo = 'ryanoasis/vim-devicons'
 
+# quick-scope
+[[plugins]]
+repo = 'unblevable/quick-scope'
+
 # fugitive
 [[plugins]]
 repo = 'tpope/vim-fugitive'
+
+# committia
+[[plugins]]
+repo = 'rhysd/committia.vim'
 
 # theme for alirline
 [[plugins]]
