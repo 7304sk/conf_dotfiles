@@ -1,6 +1,10 @@
 # Tender (color theme)
+# [[plugins]]
+# repo = 'jacoborus/tender.vim'
+
+# vim-code-dark (VS Code風カラーテーマ）
 [[plugins]]
-repo = 'jacoborus/tender.vim'
+repo = 'tomasiser/vim-code-dark' 
 
 # solarized (theme)
 #[[plugins]]

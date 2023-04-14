@@ -10,7 +10,6 @@ if dein#load_state('~/.cache/dein')
     call dein#begin('~/.cache/dein')
     call dein#load_toml('~/.config/nvim/dein.toml', {'lazy': 0})
     call dein#load_toml('~/.config/nvim/dein_lazy.toml', {'lazy': 1})
-    " call dein#add('preservim/nerdtree')
     call dein#end()
     call dein#save_state()
 endif
@@ -24,11 +23,8 @@ filetype plugin indent on
 syntax enable
 
 " color theme
-if (has("termguicolors"))
- set termguicolors
-endif
-colorscheme tender
-let g:airline_theme = 'tender'
+colorscheme codedark
+let g:airline_theme = 'codedark'
 
 " Start Fern
 autocmd VimEnter * nested Fern . -reveal=% -drawer -toggle -width=40
