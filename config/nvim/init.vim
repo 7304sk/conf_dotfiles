@@ -27,7 +27,7 @@ colorscheme codedark
 let g:airline_theme = 'codedark'
 
 " Start Fern
-autocmd VimEnter * nested Fern . -reveal=% -drawer -toggle -width=40
+" autocmd VimEnter * nested Fern . -reveal=% -drawer -toggle -width=40
 let g:fern#default_hidden=1
 let g:fern#renderer#nerdfont#indent_markers=1
 

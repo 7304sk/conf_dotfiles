@@ -13,3 +13,7 @@ build = 'sh -c "cd app && npm install"'
 repo = 'mattn/vim-maketable'
 on_ft = ['markdown', 'pandoc.markdown', 'rmd']
 
+# カラーコードに着色
+[[plugins]]
+repo = 'norcalli/nvim-colorizer.lua'
+on_ft = ['css', 'sass', 'scss']

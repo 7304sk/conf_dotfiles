@@ -69,7 +69,7 @@ nnoremap <Space><Right> <C-w><Right>
 nnoremap <Space><Up> <C-w><Up>
 nnoremap <Space><Down> <C-w><Down>
 " search
-" nnoremap <silent> <Space>f :let @/ = '\<' . expand('<cword>') . '\>'<CR>:set hlsearch<CR>
+nnoremap <silent> <Space>g :let @/ = '\<' . expand('<cword>') . '\>'<CR>:set hlsearch<CR>
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 " markdown
 " preview
@@ -124,3 +124,8 @@ xnoremap <C-g> y:Rg <C-R>"<CR>
 nnoremap <Space>f :BLines<CR>
 " fcでコミット履歴検索を開く
 nnoremap <Space>c :Commits<CR>
+
+" edgemotion での移動（縦移動）
+nnoremap <Space>j <Plug>(edgemotion-j)
+nnoremap <Space>k <Plug>(edgemotion-k)
+

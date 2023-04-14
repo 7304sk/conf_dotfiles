@@ -2,7 +2,7 @@
 # [[plugins]]
 # repo = 'jacoborus/tender.vim'
 
-# vim-code-dark (VS Code風カラーテーマ）
+# vim-code-dark (VS Code風カラーテーマ)
 [[plugins]]
 repo = 'tomasiser/vim-code-dark' 
 
@@ -57,6 +57,10 @@ repo = 'ryanoasis/vim-devicons'
 # quick-scope
 [[plugins]]
 repo = 'unblevable/quick-scope'
+
+# vim-edgemotion
+[[plugins]]
+repo = 'haya14busa/vim-edgemotion'
 
 # fugitive
 [[plugins]]
