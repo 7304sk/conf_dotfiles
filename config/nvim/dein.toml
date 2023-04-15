@@ -1,14 +1,6 @@
-# Tender (color theme)
-# [[plugins]]
-# repo = 'jacoborus/tender.vim'
-
 # vim-code-dark (VS Code風カラーテーマ)
 [[plugins]]
 repo = 'tomasiser/vim-code-dark' 
-
-# solarized (theme)
-#[[plugins]]
-# repo = 'altercation/vim-colors-solarized'
 
 # coc
 [[plugins]]
@@ -21,6 +13,10 @@ hook_source = 'call coil398#init#coc#hook_source()'
 # fern
 [[plugins]]
 repo = 'lambdalisue/fern.vim'
+hook_add = '''
+    let g:fern#default_hidden=1
+    let g:fern#renderer#nerdfont#indent_markers=1
+'''
 
 # git-status for fern
 [[plugins]]
@@ -87,6 +83,7 @@ hook_add = '''
     let g:airline#extensions#tabline#buffer_nr_show = 1
     let g:airline#extensions#branch#enabled=1
     let g:airline#extensions#hunks#enabled=0
+    let g:airline_theme = 'codedark'
     if !exists('g:airline_symbols')
         let g:airline_symbols = {}
     endif
@@ -106,13 +103,13 @@ repo = 'junegunn/fzf.vim'
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
 hook_add = '''
-        set signcolumn=yes
-        let g:gitgutter_async = 1
-        let g:gitgutter_sign_modified = 'rw'
-        highlight GitGutterAdd ctermfg=green
-        highlight GitGutterChange ctermfg=yellow
-        highlight GitGutterDelete ctermfg=red
-        highlight GitGutterChangeDelete ctermfg=yellow
+    set signcolumn=yes
+    let g:gitgutter_async = 1
+    let g:gitgutter_sign_modified = '%'
+    highlight GitGutterAdd ctermfg=green
+    highlight GitGutterChange ctermfg=yellow
+    highlight GitGutterDelete ctermfg=red
+    highlight GitGutterChangeDelete ctermfg=yellow
 '''
 
 # tcomment
