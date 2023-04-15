@@ -5,17 +5,18 @@ cd
 git clone git@github.com:7304sk/conf_dotfiles.git
 cd conf_dotfiles
 git update-index --skip-worktree config/fish/conf.d/config_unique.fish
-./install.sh
+./install.sh;q
 ```
 
 .gitconfig の user が私のものなので、これを使いたい人がいたらそこだけ直してください。
+
 ## set up
 
 ### Mac
 
 ```Bash
 # Homebrew
-/bin/bash -c "$(curl -fsSL httpsa//raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew bundle --global
 
 # fish

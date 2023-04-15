@@ -147,7 +147,7 @@ module.exports = {
             size: 1,
             tray: true,
             unique: true
-          },
+        },
     },
     // a list of plugins to fetch and install from npm
     // format: [@org/]project[#version]

@@ -28,6 +28,18 @@ colorscheme codedark
 " Start Fern
 " autocmd VimEnter * nested Fern . -reveal=% -drawer -toggle -width=40
 
+" TreeSitter
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+    highlight = {
+        enable = true,
+        disable = {
+        }
+    },
+    ensure_installed = 'all'
+}
+EOF
+
 " Committia
 let g:committia_hooks = {}
 function! g:committia_hooks.edit_open(info)

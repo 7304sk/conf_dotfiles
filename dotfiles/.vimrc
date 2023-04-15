@@ -51,7 +51,10 @@ set shortmess+=c
 set signcolumn=yes
 
 " Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
+inoremap <silent><expr> <C-Space> coc#refresh()
+" CoCの入力補完をEnterで決定
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " keymap
 " : Swap colon and semicolon

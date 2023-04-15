@@ -27,7 +27,6 @@ hook_add = '''
         \'coc-markdownlint', 
         \'coc-pairs', 
         \'coc-snippets', 
-        \'coc-spell-checker', 
         \'coc-tsserver', 
         \'coc-yaml', 
     \]
@@ -72,6 +71,10 @@ repo = 'yuki-yano/fern-preview.vim'
 # devicons
 [[plugins]]
 repo = 'ryanoasis/vim-devicons'
+
+# TreeSitter
+[[plugins]]
+repo = 'nvim-treesitter/nvim-treesitter'
 
 # quick-scope
 [[plugins]]
@@ -145,3 +148,12 @@ hook_add = '''
 # Buffer Line
 [[plugins]]
 repo = 'akinsho/bufferline.nvim'
+
+# indent line
+[[plugins]]
+repo = 'lukas-reineke/indent-blankline.nvim'
+
+# 引数の色を変える
+[[plugins]]
+repo = 'm-demare/hlargs.nvim'
+
