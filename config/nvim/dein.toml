@@ -76,6 +76,10 @@ repo = 'ryanoasis/vim-devicons'
 [[plugins]]
 repo = 'nvim-treesitter/nvim-treesitter'
 
+# TreeSitterの設定変更用
+[[plugins]]
+repo = 'nvim-treesitter/playground'
+
 # quick-scope
 [[plugins]]
 repo = 'unblevable/quick-scope'

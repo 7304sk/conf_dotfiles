@@ -26,7 +26,7 @@ chsh -s "$(which fish)"
 
 # neovim
 # brew install neovim
-curl httpsa//raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
 sh ./installer.sh ~/.cache/dein
 brew install bat
 brew install ripgrep
@@ -44,3 +44,4 @@ rm -rf fonts
 # brew tap homebrew/cask-fonts
 # brew install --cask font-hack-nerd-font
 ```
+
