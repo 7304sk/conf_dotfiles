@@ -9,6 +9,29 @@ rev = 'release'
 on_i = 1
 merged = '0'
 hook_source = 'call coil398#init#coc#hook_source()'
+hook_add = '''
+    let g:coc_global_extensions = [
+        \'coc-actions',
+        \'coc-html',
+        \'coc-css',
+        \'coc-emmet',
+        \'coc-diagnostic', 
+        \'coc-eslint', 
+        \'coc-python', 
+        \'coc-git', 
+        \'coc-highlight',
+        \'coc-java', 
+        \'coc-sh', 
+        \'coc-json', 
+        \'coc-lists', 
+        \'coc-markdownlint', 
+        \'coc-pairs', 
+        \'coc-snippets', 
+        \'coc-spell-checker', 
+        \'coc-tsserver', 
+        \'coc-yaml', 
+    \]
+'''
 
 # fern
 [[plugins]]
@@ -122,4 +145,3 @@ hook_add = '''
 # Buffer Line
 [[plugins]]
 repo = 'akinsho/bufferline.nvim'
-
