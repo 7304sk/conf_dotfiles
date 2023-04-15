@@ -23,6 +23,7 @@ set incsearch
 set ignorecase
 set smartcase
 set nobackup
+set nowritebackup
 set noswapfile
 set fileformats=unix,dos,mac
 syntax on
@@ -45,6 +46,25 @@ set whichwrap=b,s,h,l,<,>,[,]
 if has('persistent_undo')
   set undofile
 endif
+
+set shortmess+=c
+set signcolumn=yes
+
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
 
 " keymap
 " : Swap colon and semicolon
@@ -71,9 +91,12 @@ nnoremap <Space><Down> <C-w><Down>
 " search
 nnoremap <silent> <Space>g :let @/ = '\<' . expand('<cword>') . '\>'<CR>:set hlsearch<CR>
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+" Buffer 移動
+nnoremap <Space>b :bp<CR>
+nnoremap <Space>n :bn<CR>
 " markdown
 " preview
-nnoremap <Space>b :MarkdownPreview<CR>
+nnoremap <Space>m :MarkdownPreview<CR>
 " table
 vnoremap mt :'<,'>MakeTable
 vnoremap tm :'<,'>MakeTable!

@@ -1,6 +1,6 @@
 # vim-code-dark (VS Code風カラーテーマ)
 [[plugins]]
-repo = 'tomasiser/vim-code-dark' 
+repo = 'tomasiser/vim-code-dark'
 
 # coc
 [[plugins]]
@@ -66,17 +66,10 @@ repo = 'tpope/vim-fugitive'
 [[plugins]]
 repo = 'rhysd/committia.vim'
 
-# theme for alirline
-[[plugins]]
-repo = 'vim-airline/vim-airline-themes'
-hook_add = '''
-        let g:airline_theme = 'powerlineish'
-'''
-
 # airline
 [[plugins]]
 repo = 'vim-airline/vim-airline'
-#depends =['vim-airline/vim-airline-themes', 'tpope/vim-fugitive']
+# depends =['tomasiser/vim-code-dark', 'tpope/vim-fugitive']
 hook_add = '''
     let g:airline_powerline_fonts = 1
     let g:airline#extensions#tabline#enabled = 1
