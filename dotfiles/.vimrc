@@ -50,19 +50,6 @@ endif
 set shortmess+=c
 set signcolumn=yes
 
-" Use tab for trigger completion with characters ahead and navigate.
-" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
 
@@ -103,9 +90,9 @@ vnoremap tm :'<,'>MakeTable!
 nnoremap <Space>t :UnmakeTable
 "" git操作
 " g]で前の変更箇所へ移動する
-nnoremap <Space>[ :GitGutterPrevHunk<CR>
+nnoremap <Space>j :GitGutterPrevHunk<CR>
 " g[で次の変更箇所へ移動する
-nnoremap <Space>] :GitGutterNextHunk<CR>
+nnoremap <Space>k:GitGutterNextHunk<CR>
 " ghでdiffをハイライトする
 nnoremap <Space>h :GitGutterLineHighlightsToggle<CR>
 " Gitguuter記号の色を変更する
@@ -149,6 +136,6 @@ nnoremap <Space>f :BLines<CR>
 nnoremap <Space>c :Commits<CR>
 
 " edgemotion での移動（縦移動）
-nnoremap <Space>j <Plug>(edgemotion-j)
-nnoremap <Space>k <Plug>(edgemotion-k)
+nnoremap <Space>] <Plug>(edgemotion-j)
+nnoremap <Space>[ <Plug>(edgemotion-k)
 
