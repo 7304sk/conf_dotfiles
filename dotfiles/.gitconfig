@@ -1,12 +1,12 @@
-[user]
-    name = shoalwave
-    email = shoalwave.dev@gmail.com
+[include]
+    path = .gitconfig.local
 [init]
     defaultbranch = main
 [merge]
     ff = false
 [pull]
     ff = only
+    rebase = false
 [fetch]
     prune = true
 [push]
