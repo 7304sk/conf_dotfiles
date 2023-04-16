@@ -40,6 +40,10 @@ hook_add = '''
     let g:fern#renderer#nerdfont#indent_markers=1
 '''
 
+# fern-hijack
+[[plugins]]
+repo = 'lambdalisue/fern-hijack.vim'
+
 # git-status for fern
 [[plugins]]
 repo = 'lambdalisue/fern-git-status.vim'

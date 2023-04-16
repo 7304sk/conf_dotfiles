@@ -27,6 +27,18 @@ colorscheme codedark
 
 " Start Fern
 " autocmd VimEnter * nested Fern . -reveal=% -drawer -toggle -width=40
+" fern preview
+function! s:fern_settings() abort
+  nmap <silent> <buffer> p     <Plug>(fern-action-preview:toggle)
+  nmap <silent> <buffer> <C-p> <Plug>(fern-action-preview:auto:toggle)
+  nmap <silent> <buffer> <C-d> <Plug>(fern-action-preview:scroll:down:half)
+  nmap <silent> <buffer> <C-u> <Plug>(fern-action-preview:scroll:up:half)
+endfunction
+
+augroup fern-settings
+  autocmd!
+  autocmd FileType fern call s:fern_settings()
+augroup END
 
 " TreeSitter
 lua <<EOF
@@ -56,3 +68,4 @@ function! g:committia_hooks.edit_open(info)
     imap <buffer><C-n> <Plug>(committia-scroll-diff-down-half)
     imap <buffer><C-p> <Plug>(committia-scroll-diff-up-half)
 endfunction
+

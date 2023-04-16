@@ -50,6 +50,9 @@ endif
 set shortmess+=c
 set signcolumn=yes
 
+" <Leader> を Space キーに割り当て
+let mapleader = "\<Space>"
+
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <C-Space> coc#refresh()
 " CoCの入力補完をEnterで決定
@@ -63,41 +66,38 @@ nnoremap : ;
 " escape
 inoremap <silent> jj <Esc>
 inoremap jf <Esc>:w
-" Move to beginning or end of line
-noremap <S-h> 0
-noremap <S-l> $
 " increment, decrement
 nnoremap + <C-a>
 nnoremap - <C-x>
 " undo, redo
-nnoremap <Space>z :undo<CR>
-nnoremap <Space>y :redo<CR>
+nnoremap <Leader>z :undo<CR>
+nnoremap <Leader>y :redo<CR>
 " Fern (only for neovim)
-nnoremap <Space><Space> :Fern . -reveal=% -drawer -toggle -width=40<CR>
-nnoremap <Space><Left> <C-w><Left>
-nnoremap <Space><Right> <C-w><Right>
-nnoremap <Space><Up> <C-w><Up>
-nnoremap <Space><Down> <C-w><Down>
+nnoremap <Leader><Leader> :Fern . -reveal=% -drawer -toggle -width=40<CR>
+nnoremap <Leader><Left> <C-w><Left>
+nnoremap <Leader><Right> <C-w><Right>
+nnoremap <Leader><Up> <C-w><Up>
+nnoremap <Leader><Down> <C-w><Down>
 " search
-nnoremap <silent> <Space>g :let @/ = '\<' . expand('<cword>') . '\>'<CR>:set hlsearch<CR>
+nnoremap <silent> <Leader>g :let @/ = '\<' . expand('<cword>') . '\>'<CR>:set hlsearch<CR>
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 " Buffer 移動
-nnoremap <Space>b :bp<CR>
-nnoremap <Space>n :bn<CR>
+nnoremap <Leader>b :bp<CR>
+nnoremap <Leader>n :bn<CR>
 " markdown
 " preview
-nnoremap <Space>m :MarkdownPreview<CR>
+nnoremap <Leader>m :MarkdownPreview<CR>
 " table
 vnoremap mt :'<,'>MakeTable
 vnoremap tm :'<,'>MakeTable!
-nnoremap <Space>t :UnmakeTable
+nnoremap <Leader>t :UnmakeTable
 "" git操作
 " g]で前の変更箇所へ移動する
-nnoremap <Space>j :GitGutterPrevHunk<CR>
+nnoremap <Leader>j :GitGutterPrevHunk<CR>
 " g[で次の変更箇所へ移動する
-nnoremap <Space>k:GitGutterNextHunk<CR>
+nnoremap <Leader>k:GitGutterNextHunk<CR>
 " ghでdiffをハイライトする
-nnoremap <Space>h :GitGutterLineHighlightsToggle<CR>
+nnoremap <Leader>h :GitGutterLineHighlightsToggle<CR>
 " Gitguuter記号の色を変更する
 highlight GitGutterAdd ctermfg=green
 highlight GitGutterChange ctermfg=blue
@@ -130,15 +130,15 @@ command! -bang -nargs=* Rg
 nnoremap <C-g> :Rg<CR>
 
 " Space rでカーソル位置の単語をファイル検索する
-nnoremap <Space>r vawy:Rg <C-R>"<CR>
+nnoremap <Leader>r vawy:Rg <C-R>"<CR>
 " (Visual) Ctrl+gで選択した単語をファイル検索する
 xnoremap <C-g> y:Rg <C-R>"<CR>
 " Space fで開いているファイルの文字列検索を開く
-nnoremap <Space>f :BLines<CR>
+nnoremap <Leader>f :BLines<CR>
 " fcでコミット履歴検索を開く
-nnoremap <Space>c :Commits<CR>
+nnoremap <Leader>c :Commits<CR>
 
 " edgemotion での移動（縦移動）
-nnoremap <Space>] <Plug>(edgemotion-j)
-nnoremap <Space>[ <Plug>(edgemotion-k)
+nnoremap <Leader>] <Plug>(edgemotion-j)
+nnoremap <Leader>[ <Plug>(edgemotion-k)
 
