@@ -4,11 +4,11 @@
 cd
 git clone git@github.com:7304sk/conf_dotfiles.git
 cd conf_dotfiles
-git update-index --skip-worktree ./config/fish/conf.d/config_unique.fish ./dotfiles/.gitconfig_user
+git update-index --skip-worktree ./config/fish/conf.d/config_unique.fish ./dotfiles/.gitconfig.local
 ./install.sh
 ```
 
-~/.gitconfig_user を編集して自分のにしてください。
+~/.gitconfig.local を編集して自分のユーザ情報にしてください。
 
 ## set up
 
