@@ -49,6 +49,7 @@ abbr -a gss     git stash save
 abbr -a gsp     git stash pop stash@{0}
 abbr -a gsl     git stash list
 abbr -a gt      git tag
+abbr -a gl      git tree
 # docker
 abbr -a d       docker
 abbr -a de      docker exec -it
