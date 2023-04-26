@@ -3,9 +3,7 @@ for a in (abbr --list); abbr --erase $a; end
 
 ####
 #  set abbreviations
-abbr -a abe     'for a in (abbr --list); abbr --erase $a; end'
-abbr -a abs     'source ~/.config/fish/conf.d/config_abbr.fish'
-abbr -a abl     cat ~/.config/fish/conf.d/config_abbr.fish
+abbr -a abr     cat ~/.config/fish/config_abbr.fish
 abbr -a ll      ls -alFX
 abbr -a .       cd ../
 abbr -a ..      cd ../../
