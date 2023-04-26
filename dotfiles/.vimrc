@@ -1,8 +1,8 @@
-" setting
 if has('vim_starting')
     set nocompatible
 endif
 
+"""""""""" 基本設定
 set fenc=utf-8
 set encoding=utf-8
 set fileencoding=utf-8
@@ -46,20 +46,14 @@ set whichwrap=b,s,h,l,<,>,[,]
 if has('persistent_undo')
   set undofile
 endif
-
 set shortmess+=c
 set signcolumn=yes
-
 " <Leader> を Space キーに割り当て
 let mapleader = "\<Space>"
+"" 反映時間を短くする(デフォルトは4000ms)
+set updatetime=250
 
-" Use <c-space> to trigger completion.
-inoremap <silent><expr> <C-Space> coc#refresh()
-" CoCの入力補完をEnterで決定
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-" keymap
+"""""""""" keymap
 " : Swap colon and semicolon
 nnoremap ; :
 nnoremap : ;
@@ -69,44 +63,78 @@ inoremap jf <Esc>:w
 " increment, decrement
 nnoremap + <C-a>
 nnoremap - <C-x>
+" indent, outdent
+nnoremap <Leader>. >>
+xnoremap <Leader>. >
+nnoremap <Leader>, <<
+xnoremap <Leader>, <
+" jump
+nnoremap <Leader>4 $
+xnoremap <leader>4 $
+nnoremap <Leader>6 ^
+xnoremap <Leader>6 ^
 " undo, redo
 nnoremap <Leader>z :undo<CR>
 nnoremap <Leader>y :redo<CR>
-" Fern (only for neovim)
-nnoremap <Leader><Leader> :Fern . -reveal=% -drawer -toggle -width=40<CR>
-nnoremap <Leader><Left> <C-w><Left>
-nnoremap <Leader><Right> <C-w><Right>
-nnoremap <Leader><Up> <C-w><Up>
-nnoremap <Leader><Down> <C-w><Down>
-" search
+" カーソルが当たっている単語をハイライト
 nnoremap <silent> <Leader>g :let @/ = '\<' . expand('<cword>') . '\>'<CR>:set hlsearch<CR>
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
-" Buffer 移動
+" バッファ移動
 nnoremap <Leader>b :bp<CR>
 nnoremap <Leader>n :bn<CR>
-" markdown
+nnoremap <Leader>v :bd<CR>
+" ペイン分割
+nnoremap <Leader>w :vs<CR>
+nnoremap <Leader>q :sp<CR>
+" ペイン移動
+nnoremap <Leader><Left> <C-w><Left>
+nnoremap <Leader><Down> <C-w><Down>
+nnoremap <Leader><Up> <C-w><Up>
+nnoremap <Leader><Right> <C-w><Right>
+nnoremap ,h <C-w><Left>
+nnoremap ,j <C-w><Down>
+nnoremap ,k <C-w><Up>
+nnoremap ,l <C-w><Right>
+
+"""""""""" プラグイン関連
+""""" Fern
+nnoremap <Leader><Leader> :Fern . -reveal=% -drawer -toggle -width=40<CR>
+""""" CoC
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <C-Space> coc#refresh()
+" CoCの入力補完をEnterで決定
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+        \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+" <Tab>で次、<S+Tab>で前
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+inoremap <silent><expr> <TAB>
+  \ coc#pum#visible() ? coc#pum#next(1):
+  \ <SID>check_back_space() ? "\<Tab>" :
+  \ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<S-TAB>" " "\<C-h>"
+inoremap <silent><expr> <c-space> coc#refresh()
+""""" Markdown
 " preview
 nnoremap <Leader>m :MarkdownPreview<CR>
-" table
+" markdown table
 vnoremap mt :'<,'>MakeTable
 vnoremap tm :'<,'>MakeTable!
 nnoremap <Leader>t :UnmakeTable
-"" git操作
-" g]で前の変更箇所へ移動する
+""""" git
+" 直前のgit変更箇所へ移動する
 nnoremap <Leader>j :GitGutterPrevHunk<CR>
-" g[で次の変更箇所へ移動する
-nnoremap <Leader>k:GitGutterNextHunk<CR>
-" ghでdiffをハイライトする
+" 次のgit変更箇所へ移動する
+nnoremap <Leader>k :GitGutterNextHunk<CR>
+" git diffをハイライトする
 nnoremap <Leader>h :GitGutterLineHighlightsToggle<CR>
 " Gitguuter記号の色を変更する
 highlight GitGutterAdd ctermfg=green
 highlight GitGutterChange ctermfg=blue
 highlight GitGutterDelete ctermfg=red
-
-"" 反映時間を短くする(デフォルトは4000ms)
-set updatetime=250
-
-"" fzf.vim
+""""" fzf.vim
 " Ctrl+pでファイル検索を開く
 " git管理されていれば:GFiles、そうでなければ:Filesを実行する
 fun! FzfOmniFiles()
@@ -118,7 +146,6 @@ fun! FzfOmniFiles()
   endif
 endfun
 nnoremap <C-p> :call FzfOmniFiles()<CR>
-
 " Ctrl+gで複数ファイルの文字列検索を開く
 " <S-?>でプレビューを表示/非表示する
 command! -bang -nargs=* Rg
@@ -128,17 +155,18 @@ command! -bang -nargs=* Rg
 \ : fzf#vim#with_preview({'options': '--exact --delimiter : --nth 3..'}, 'right:50%:hidden', '?'),
 \ <bang>0)
 nnoremap <C-g> :Rg<CR>
-
 " Space rでカーソル位置の単語をファイル検索する
 nnoremap <Leader>r vawy:Rg <C-R>"<CR>
 " (Visual) Ctrl+gで選択した単語をファイル検索する
 xnoremap <C-g> y:Rg <C-R>"<CR>
 " Space fで開いているファイルの文字列検索を開く
 nnoremap <Leader>f :BLines<CR>
-" fcでコミット履歴検索を開く
+" Space cでコミット履歴検索を開く
 nnoremap <Leader>c :Commits<CR>
-
-" edgemotion での移動（縦移動）
+""""" edgemotion
+" ブロック移動（縦方向）
 nnoremap <Leader>] <Plug>(edgemotion-j)
+xnoremap <Leader>] <Plug>(edgemotion-j)
 nnoremap <Leader>[ <Plug>(edgemotion-k)
+xnoremap <Leader>[ <Plug>(edgemotion-k)
 

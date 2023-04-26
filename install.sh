@@ -34,6 +34,10 @@ create_config() {
         command echo "$HOME/.confbackup not found. Auto Make it"
         command mkdir "$HOME/.confbackup"
     fi
+    if [ ! -d "$HOME/.config" ];then
+        command echo "$HOME/.config not found. Auto Make it"
+        command mkdir "$HOME/.config"
+    fi
 
     local script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
     local confdir="${script_dir}/config"

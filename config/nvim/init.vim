@@ -22,6 +22,9 @@ endif
 filetype plugin indent on
 syntax enable
 
+" 全角スペースを強調
+autocmd Colorscheme * highlight FullWidthSpace ctermbg=white
+autocmd VimEnter * match FullWidthSpace /　/
 " color theme
 colorscheme codedark
 
@@ -41,11 +44,13 @@ augroup fern-settings
 augroup END
 
 " TreeSitter
+" markdown は conceal の設定が気に食わないのでオフにする
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
     highlight = {
         enable = true,
         disable = {
+            'markdown'
         }
     },
     ensure_installed = 'all'
@@ -69,3 +74,8 @@ function! g:committia_hooks.edit_open(info)
     imap <buffer><C-p> <Plug>(committia-scroll-diff-up-half)
 endfunction
 
+" vim-makdown
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_conceal = 0
+let g:tex_conceal = ""
+let g:vim_markdown_math = 1

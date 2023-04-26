@@ -15,6 +15,8 @@ hook_add = '''
         \'coc-html',
         \'coc-css',
         \'coc-emmet',
+        \'coc-sql',
+        \'coc-sqlfluff',
         \'coc-diagnostic', 
         \'coc-eslint', 
         \'coc-python', 
@@ -88,6 +90,10 @@ repo = 'nvim-treesitter/playground'
 [[plugins]]
 repo = 'unblevable/quick-scope'
 
+# 単語ハイライト
+[[plugins]]
+repo = 'RRethy/vim-illuminate'
+
 # vim-edgemotion
 [[plugins]]
 repo = 'haya14busa/vim-edgemotion'
@@ -153,10 +159,6 @@ hook_add = '''
         let g:rainbow_active = 1
 '''
 
-# Buffer Line
-[[plugins]]
-repo = 'akinsho/bufferline.nvim'
-
 # indent line
 [[plugins]]
 repo = 'lukas-reineke/indent-blankline.nvim'
@@ -164,4 +166,3 @@ repo = 'lukas-reineke/indent-blankline.nvim'
 # 引数の色を変える
 [[plugins]]
 repo = 'm-demare/hlargs.nvim'
-

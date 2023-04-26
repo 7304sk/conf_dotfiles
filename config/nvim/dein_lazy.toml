@@ -2,6 +2,14 @@
 repo  = 'Quramy/tsuquyomi'
 on_ft = ['typescript']
 
+# vim-markdown highlighter
+[[plugins]]
+repo = 'preservim/vim-markdown'
+on_ft = ['markdown', 'pandoc.markdown', 'rmd']
+hook_add = '''
+let g:vim_markdown_conceal = 0
+'''
+
 # markdown preview
 [[plugins]]
 repo = 'iamcco/markdown-preview.nvim'

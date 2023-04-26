@@ -92,7 +92,8 @@ module.exports = {
         //
         // Cygwin
         // - Example: `C:\\cygwin64\\bin\\bash.exe`
-        shell: '',
+        shell: '/opt/homebrew/bin/fish',
+        // shell: '/bin/bash',
         // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
         // by default `['--login']` will be used
         shellArgs: ['--login'],
@@ -135,14 +136,15 @@ module.exports = {
         overlay: {
             alwaysOnTop: true,
             animate: false,
-            hasShadow: false,
+            hasShadow: true,
             hideDock: false,
             hideOnBlur: false,
             hotkeys: ['Option+Space'],
-            position: 'top',
+            position: 'left',
             primaryDisplay: false,
             resizable: true,
-            startAlone: false,
+            visibleOnAllWorkspaces: true,
+            startAlone: true,
             startup: true,
             size: 1,
             tray: true,
