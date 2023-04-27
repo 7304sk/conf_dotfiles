@@ -44,6 +44,7 @@ set clipboard+=unnamedplus
 set mouse=a
 set whichwrap=b,s,h,l,<,>,[,]
 if has('persistent_undo')
+  set undodir=$HOME/.vi_undo
   set undofile
 endif
 set shortmess+=c
@@ -91,10 +92,10 @@ nnoremap <Leader><Left> <C-w><Left>
 nnoremap <Leader><Down> <C-w><Down>
 nnoremap <Leader><Up> <C-w><Up>
 nnoremap <Leader><Right> <C-w><Right>
-nnoremap ,h <C-w><Left>
-nnoremap ,j <C-w><Down>
-nnoremap ,k <C-w><Up>
-nnoremap ,l <C-w><Right>
+nnoremap <Leader>h <C-w><Left>
+nnoremap <Leader>j <C-w><Down>
+nnoremap <Leader>k <C-w><Up>
+nnoremap <Leader>l <C-w><Right>
 
 """""""""" プラグイン関連
 """"" Fern
@@ -125,11 +126,11 @@ vnoremap tm :'<,'>MakeTable!
 nnoremap <Leader>t :UnmakeTable
 """"" git
 " 直前のgit変更箇所へ移動する
-nnoremap <Leader>j :GitGutterPrevHunk<CR>
+nnoremap <Leader>i :GitGutterPrevHunk<CR>
 " 次のgit変更箇所へ移動する
-nnoremap <Leader>k :GitGutterNextHunk<CR>
+nnoremap <Leader>o :GitGutterNextHunk<CR>
 " git diffをハイライトする
-nnoremap <Leader>h :GitGutterLineHighlightsToggle<CR>
+nnoremap <Leader>u :GitGutterLineHighlightsToggle<CR>
 " Gitguuter記号の色を変更する
 highlight GitGutterAdd ctermfg=green
 highlight GitGutterChange ctermfg=blue
